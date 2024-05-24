@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="290dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_element"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivProductCatalogElement"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/food"
+        android:contentDescription="@string/product" />
+
+    <ImageView
+        android:id="@+id/ivTagCatalogElement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_element_sale"
+        android:contentDescription="@string/tag" />
+
+    <TextView
+        android:id="@+id/tvNameCatalogElement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="?attr/text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProductCatalogElement"
+        tools:text="Том Ям" />
+
+    <TextView
+        android:id="@+id/tvWeightCatalogElement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="?attr/text_accent"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameCatalogElement"
+        tools:text="500 г." />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddToCartCatalogElement"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_button"
+        android:elevation="8dp"
+        android:textColor="?attr/text"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="600 ₽" />
+
+    <LinearLayout
+        android:id="@+id/llAddedCatalogElement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnMinusCatalogElement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_button"
+            android:elevation="8dp"
+            android:src="@drawable/ic_minus"
+            app:cornerRadius="8dp"
+            android:contentDescription="@string/delete" />
+
+        <TextView
+            android:id="@+id/tvInCartCatalogElement"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="?attr/text"
+            android:textSize="18sp"
+            tools:text="100" />
+
+        <ImageButton
+            android:id="@+id/btnPlusCatalogElement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_button"
+            android:elevation="8dp"
+            android:src="@drawable/ic_plus"
+            app:cornerRadius="8dp"
+            android:contentDescription="@string/add" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

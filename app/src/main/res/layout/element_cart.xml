@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ivProductCartElement"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/food"
+        android:contentDescription="@string/product" />
+
+    <TextView
+        android:id="@+id/tvNameCartElement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="?attr/text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivProductCartElement"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Пицца с ветчной и грибами 32 см" />
+
+    <TextView
+        android:id="@+id/tvPriceCartElement"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="?attr/text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="400 р\n123" />
+
+    <LinearLayout
+        android:id="@+id/llAddedCartElement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivProductCartElement">
+
+        <ImageButton
+            android:id="@+id/btnMinusCartElement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_button"
+            android:elevation="8dp"
+            android:src="@drawable/ic_minus"
+            app:cornerRadius="8dp"
+            android:contentDescription="@string/delete" />
+
+        <TextView
+            android:id="@+id/tvInCartCartElement"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="?attr/text"
+            android:textSize="18sp"
+            tools:text="100" />
+
+        <ImageButton
+            android:id="@+id/btnPlusCartElement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_button"
+            android:elevation="8dp"
+            android:src="@drawable/ic_plus"
+            app:cornerRadius="8dp"
+            android:contentDescription="@string/add" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/spacerCartElement"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="?attr/separator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

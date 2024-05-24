@@ -5,5 +5,13 @@
         <item name="android:windowBackground">@color/bg_day</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">@color/bg_day</item>
+
+        <item name="text">@color/text_day</item>
+        <item name="text_accent">@color/text_accent_day</item>
+        <item name="element_bg">@color/bg_day</item>
+        <item name="bw">@color/white</item>
+        <item name="wb">@color/black</item>
+        <item name="separator">@color/separator_day</item>
+
     </style>
 </resources>
