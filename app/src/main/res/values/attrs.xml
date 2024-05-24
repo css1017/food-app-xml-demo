@@ -1,0 +1,10 @@
+<resources>
+
+    <attr name="text" format="color" />
+    <attr name="text_accent" format="color" />
+    <attr name="element_bg" format="color" />
+    <attr name="bw" format="color" />
+    <attr name="wb" format="color" />
+    <attr name="separator" format="color" />
+
+</resources>

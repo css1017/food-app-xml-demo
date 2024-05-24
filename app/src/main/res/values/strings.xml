@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">foodiesXmlDemo</string>
+    <string name="weight">Вес</string>
+    <string name="calories">Энерг. ценность</string>
+    <string name="protein">Белки</string>
+    <string name="fats">Жиры</string>
+    <string name="carbs">Углеводы</string>
+    <string name="apply">Готово</string>
+    <string name="sale">Со скидкой</string>
+    <string name="spicy">Острое</string>
+    <string name="vegan">Без мяса</string>
+    <string name="filter">Подобрать блюда</string>
+    <string name="empty_cart">Пусто, выберите блюда в каталоге</string>
+    <string name="empty_search_query">Введите название блюда, которое ищите</string>
+    <string name="empty_catalog">Таких блюд нет, попробуйте изменить фильтры</string>
+    <string name="search">Поиск</string>
+    <string name="logo">Логотип</string>
+    <string name="filter_">Фильтр каталога</string>
+    <string name="add">Добавить</string>
+    <string name="delete">Удалить</string>
+    <string name="product">Продукт</string>
+    <string name="tag">Тэг</string>
+    <string name="cart">Корзина</string>
+    <string name="back">Назад</string>
+    <string name="find_hint">Найти блюдо</string>
 </resources>

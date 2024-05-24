@@ -5,7 +5,13 @@
     <color name="primary">#FFF15412</color>
     <color name="dark_day">#FF333333</color>
     <color name="bg_day">#FFF5F5F5</color>
+    <color name="text_accent_day">#FF626262</color>
+    <color name="text_day">#FF202020</color>
+    <color name="separator_day">#FFe0e0e0</color>
 
+    <color name="separator_night">#FF1F1F1F</color>
+    <color name="text_night">#FFDFDFDF</color>
+    <color name="text_accent_night">#FF9D9D9D</color>
     <color name="light_night">#FFc1c1c1</color>
     <color name="bg_night">#FF121212</color>
 </resources>

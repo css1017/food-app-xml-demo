@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/separatorDetails1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/separator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvWeightDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/weight"
+                android:textColor="?attr/text_accent"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/spacerDetails"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvWeightValueDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="?attr/text"
+                android:textSize="16sp"
+                tools:text="300 г" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separatorDetails"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/separator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvCaloriesDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/calories"
+                android:textColor="?attr/text_accent"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/spacerDetails2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvCaloriesValueDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="?attr/text"
+                android:textSize="16sp"
+                tools:text="567 ккал" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separatorDetails2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/separator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvProteinDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/protein"
+                android:textColor="?attr/text_accent"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/spacerDetails3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvProteinValueDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="?attr/text"
+                android:textSize="16sp"
+                tools:text="45 г" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separatorDetails3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/separator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvFatsDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/fats"
+                android:textColor="?attr/text_accent"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/spacerDetails4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvFatsValueDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="?attr/text"
+                android:textSize="16sp"
+                tools:text="55 г" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separatorDetails4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/separator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvCarbsDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/carbs"
+                android:textColor="?attr/text_accent"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/spacerDetails5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvCarbsValueDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="?attr/text"
+                android:textSize="16sp"
+                tools:text="80 г" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separatorDetails5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/separator" />
+
+        <View
+            android:id="@+id/spacerProductDetails"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+    </LinearLayout>
