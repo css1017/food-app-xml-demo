@@ -2,6 +2,7 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llCategoryCatalogElement"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -10,12 +11,11 @@
         android:id="@+id/btnCategoryCatalogElement"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/bg_button"
-        android:backgroundTint="@color/primary"
+        android:layout_margin="8dp"
+        android:background="@android:color/transparent"
         android:elevation="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:textAllCaps="false"
         android:textColor="?attr/text"
         android:textSize="18sp"
@@ -23,5 +23,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="Роллы" />
+        tools:text="Горячие блюда" />
 </androidx.appcompat.widget.LinearLayoutCompat>
