@@ -12,22 +12,49 @@
         android:id="@+id/ivProductCatalogElement"
         android:layout_width="170dp"
         android:layout_height="170dp"
+        android:contentDescription="@string/product"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/food"
-        android:contentDescription="@string/product" />
+        app:srcCompat="@drawable/food" />
 
-    <ImageView
-        android:id="@+id/ivTagCatalogElement"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_element_sale"
-        android:contentDescription="@string/tag" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivSaleCatalogElement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/sale"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_element_sale" />
+
+        <ImageView
+            android:id="@+id/ivSpicyCatalogElement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/spicy"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_element_spicy" />
+
+        <ImageView
+            android:id="@+id/ivVeganCatalogElement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/vegan"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_element_vegan" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvNameCatalogElement"
@@ -65,10 +92,9 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/bg_button"
-        android:elevation="8dp"
+        android:elevation="1dp"
         android:textColor="?attr/text"
         android:textSize="18sp"
-        android:visibility="gone"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,6 +106,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -90,10 +117,10 @@
             android:layout_height="40dp"
             android:layout_margin="10dp"
             android:background="@drawable/bg_button"
+            android:contentDescription="@string/delete"
             android:elevation="8dp"
             android:src="@drawable/ic_minus"
-            app:cornerRadius="8dp"
-            android:contentDescription="@string/delete" />
+            app:cornerRadius="8dp" />
 
         <TextView
             android:id="@+id/tvInCartCatalogElement"
@@ -110,9 +137,9 @@
             android:layout_height="40dp"
             android:layout_margin="10dp"
             android:background="@drawable/bg_button"
+            android:contentDescription="@string/add"
             android:elevation="8dp"
             android:src="@drawable/ic_plus"
-            app:cornerRadius="8dp"
-            android:contentDescription="@string/add" />
+            app:cornerRadius="8dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

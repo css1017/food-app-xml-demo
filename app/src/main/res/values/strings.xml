@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">foodiesXmlDemo</string>
+    <string name="app_name">Foodies Demo</string>
     <string name="weight">Вес</string>
     <string name="calories">Энерг. ценность</string>
     <string name="protein">Белки</string>
@@ -23,4 +23,8 @@
     <string name="cart">Корзина</string>
     <string name="back">Назад</string>
     <string name="find_hint">Найти блюдо</string>
+    <string name="price_regular">&lt;b>%1$d ₽&lt;/b></string>
+    <string name="price_sale">&lt;b>%1$d ₽&lt;/b> &lt;s>&lt;small>%2$d ₽&lt;/small>&lt;/s></string>
+    <string name="product_weight">%1$d %2$s</string>
+    <string name="loading">Загрузка…</string>
 </resources>
