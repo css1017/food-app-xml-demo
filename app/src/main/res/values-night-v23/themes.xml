@@ -13,5 +13,7 @@
         <item name="wb">@color/white</item>
         <item name="separator">@color/separator_night</item>
 
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+
     </style>
 </resources>
