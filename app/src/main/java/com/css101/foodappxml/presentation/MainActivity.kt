@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                 setContentAdapter(list)
             }
         }
+        binding.tvCartCatalog.text = getString(R.string.empty_in_cart)
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -58,7 +59,11 @@ class MainActivity : AppCompatActivity() {
         binding.rvCategoriesCatalog.adapter?.notifyDataSetChanged()
     }
 
-    private fun handleCategorySelection(category: Categories, view: View, categories: List<Categories>) {
+    private fun handleCategorySelection(
+        category: Categories,
+        view: View,
+        categories: List<Categories>
+    ) {
         val position = categories.indexOf(category)
         val offset = (binding.rvCategoriesCatalog.width / 2) - (view.measuredWidth / 2)
         vm.categoriesLayoutManager.scrollToPositionWithOffset(position, offset)
@@ -79,7 +84,8 @@ class MainActivity : AppCompatActivity() {
             showEmpty()
         } else showContent()
         val adapter = MainProductsAdapter(products) {
-
+            val fragment = ProductFragment.newInstance(it)
+            fragment.show(supportFragmentManager, "productDetails")
         }
         binding.rvCatalog.apply {
             layoutManager = GridLayoutManager(applicationContext, 2)

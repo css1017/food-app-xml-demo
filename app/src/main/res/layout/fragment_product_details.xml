@@ -6,6 +6,49 @@
     android:layout_height="match_parent"
     android:background="?attr/bw">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/llCartCatalog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProductDetails">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1.2">
+
+            <TextView
+                android:id="@+id/tvNameProductDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="?attr/text"
+                android:textSize="34sp"
+                tools:text="Том Ям" />
+
+            <TextView
+                android:id="@+id/tvDescProductDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:textColor="?attr/text_accent"
+                android:textSize="16sp"
+                tools:text="Кокосовое молоко, кальмары, креветки, помидоры черри, грибы вешанки" />
+
+            <include
+                android:id="@+id/inclParameters"
+                layout="@layout/fragment_product_details_parameters" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
     <ImageButton
         android:id="@+id/btnBackProductDetails"
         android:layout_width="48dp"
@@ -19,51 +62,17 @@
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/back" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:weightSum="1.2"
+    <ImageView
+        android:id="@+id/ivProductDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/product"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/ivProductDetails"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/food"
-            android:contentDescription="@string/product" />
-
-        <TextView
-            android:id="@+id/tvNameProductDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:textColor="?attr/text"
-            android:textSize="34sp"
-            tools:text="Том Ям" />
-
-        <TextView
-            android:id="@+id/tvDescProductDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="32dp"
-            android:textColor="?attr/text_accent"
-            android:textSize="16sp"
-            tools:text="Кокосовое молоко, кальмары, креветки, помидоры черри, грибы вешанки" />
-
-        <include
-            android:id="@+id/inclParameters"
-            layout="@layout/fragment_product_details_parameters" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/food" />
 
     <LinearLayout
         android:id="@+id/llCartCatalog"
