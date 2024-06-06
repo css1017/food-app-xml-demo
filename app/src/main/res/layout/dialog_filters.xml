@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?attr/bw"
     android:orientation="vertical">
 
     <TextView
@@ -40,8 +41,8 @@
             android:layout_height="56dp"
             android:layout_weight="1" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipVeganFilters"
+        <CheckBox
+            android:id="@+id/checkboxVeganFilters"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:layout_gravity="center"
@@ -80,8 +81,8 @@
             android:layout_height="56dp"
             android:layout_weight="1" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipSpicyFilters"
+        <CheckBox
+            android:id="@+id/checkboxSpicyFilters"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:layout_gravity="center"
@@ -120,8 +121,8 @@
             android:layout_height="56dp"
             android:layout_weight="1" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipSaleFilters"
+        <CheckBox
+            android:id="@+id/checkboxSaleFilters"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:layout_gravity="center"

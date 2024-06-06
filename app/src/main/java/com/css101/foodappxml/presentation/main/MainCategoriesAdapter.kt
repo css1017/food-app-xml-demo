@@ -1,4 +1,4 @@
-package com.css101.foodappxml.presentation
+package com.css101.foodappxml.presentation.main
 
 import android.annotation.SuppressLint
 import android.os.Build

@@ -1,4 +1,4 @@
-package com.css101.foodappxml.presentation
+package com.css101.foodappxml.presentation.main
 
 import androidx.recyclerview.widget.RecyclerView
 import com.css101.domain.models.Categories

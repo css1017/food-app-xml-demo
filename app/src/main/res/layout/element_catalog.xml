@@ -54,6 +54,26 @@
             android:contentDescription="@string/vegan"
             android:visibility="gone"
             app:srcCompat="@drawable/ic_element_vegan" />
+
+        <ImageView
+            android:id="@+id/ivNewCatalogElement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/vegan"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_element_new" />
+
+        <ImageView
+            android:id="@+id/ivHitCatalogElement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/vegan"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_element_hit" />
     </LinearLayout>
 
     <TextView
