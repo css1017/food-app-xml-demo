@@ -11,7 +11,7 @@
     <string name="vegan">Без мяса</string>
     <string name="filter">Подобрать блюда</string>
     <string name="empty_cart">Пусто, выберите блюда в каталоге</string>
-    <string name="empty_search_query">Введите название блюда, которое ищите</string>
+    <string name="empty_search_query">Введите название блюда, \nкоторое ищите</string>
     <string name="empty_catalog">Таких блюд нет, попробуйте изменить фильтры</string>
     <string name="search">Поиск</string>
     <string name="logo">Логотип</string>
@@ -31,4 +31,5 @@
     <string name="_gram">%1$s г</string>
     <string name="to_cart_for_rub">В корзину за %1$d ₽</string>
     <string name="empty_in_cart">В корзине пусто</string>
+    <string name="nothing_was_found">Ничего не нашлось :(</string>
 </resources>

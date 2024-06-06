@@ -1,4 +1,4 @@
-package com.css101.foodappxml.presentation
+package com.css101.foodappxml.presentation.details
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable

@@ -1,4 +1,4 @@
-package com.css101.foodappxml.presentation
+package com.css101.foodappxml.presentation.main
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
@@ -12,9 +12,12 @@ import com.css101.domain.models.Categories
 import com.css101.domain.models.Products
 import com.css101.foodappxml.R
 import com.css101.foodappxml.databinding.ActivityMainBinding
+import com.css101.foodappxml.presentation.details.ProductFragment
+import com.css101.foodappxml.presentation.filter.FilterFragment
+import com.css101.foodappxml.presentation.filter.FilterType
+import com.css101.foodappxml.presentation.search.SearchFragment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
@@ -31,16 +34,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         showLoading()
+        setButtons()
         vm.categories.observe(this@MainActivity) {
-            setCategoriesAdapter(it, vm.selectedCategory.value)
+            setCategoriesAdapter(it, vm.selectedCategoryLive.value)
         }
         vm.products.observe(this@MainActivity) { list ->
-            if (vm.selectedCategory.value != null) {
-                val filtered = list.filter { it.categoryId == vm.selectedCategory.value }
-                setContentAdapter(filtered)
-            } else {
-                setContentAdapter(list)
-            }
+            setContentAdapter(list)
         }
         binding.tvCartCatalog.text = getString(R.string.empty_in_cart)
     }
@@ -70,11 +69,7 @@ class MainActivity : AppCompatActivity() {
         vm.categoriesAdapter.updateSelectedCategory(category.id)
         lifecycleScope.launch(Dispatchers.Default) {
             vm.saveSelectedCategory(category.id)
-            vm.products.value?.filter { it.categoryId == category.id }?.let {
-                withContext(Dispatchers.Main) {
-                    setContentAdapter(it)
-                }
-            }
+            vm.filterByCategory(category.id)
         }
     }
 
@@ -94,6 +89,17 @@ class MainActivity : AppCompatActivity() {
         binding.rvCatalog.adapter?.notifyDataSetChanged()
     }
 
+    private fun setButtons() = with(binding) {
+        btnFilterCatalog.setOnClickListener {
+            val fragment = FilterFragment.newInstance()
+            fragment.show(supportFragmentManager, "filter")
+        }
+        btnSearchCatalog.setOnClickListener {
+            val fragment = vm.initialProducts.value?.let { it1 -> SearchFragment.newInstance(it1) }
+            fragment?.show(supportFragmentManager, "search")
+        }
+    }
+
     private fun showLoading() = with(binding) {
         pbLoadingCatalog.visibility = View.VISIBLE
         tvEmptyCatalog.visibility = View.VISIBLE
@@ -109,5 +115,12 @@ class MainActivity : AppCompatActivity() {
         pbLoadingCatalog.visibility = View.GONE
         tvEmptyCatalog.visibility = View.VISIBLE
         tvEmptyCatalog.text = getString(R.string.empty_catalog)
+    }
+
+    fun filterProducts(filters: List<FilterType>) {
+        vm.filterProducts(filters)
+    }
+    fun getFilters(): List<FilterType> {
+        return vm.getFilters()
     }
 }

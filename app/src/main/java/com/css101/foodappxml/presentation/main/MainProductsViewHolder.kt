@@ -1,4 +1,4 @@
-package com.css101.foodappxml.presentation
+package com.css101.foodappxml.presentation.main
 
 import android.os.Build
 import android.text.Html
@@ -14,7 +14,6 @@ class MainProductsViewHolder(private val binding: ElementCatalogBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
     fun bind(item: Products): Unit = with(binding) {
-        item.tagIds
         val ctx = tvWeightCatalogElement.context
         tvNameCatalogElement.text = item.name
         tvWeightCatalogElement.text =
@@ -54,15 +53,17 @@ class MainProductsViewHolder(private val binding: ElementCatalogBinding) :
         ivSpicyCatalogElement.visibility = View.GONE
         ivVeganCatalogElement.visibility = View.GONE
         ivSaleCatalogElement.visibility = View.GONE
+        ivNewCatalogElement.visibility = View.GONE
+        ivHitCatalogElement.visibility = View.GONE
         item.tagIds.forEach {
             when (it) {
                 null -> {}
-                1 -> ivSpicyCatalogElement.visibility = View.VISIBLE
+                0 -> ivSaleCatalogElement.visibility = View.VISIBLE
+                1 -> ivNewCatalogElement.visibility = View.VISIBLE
                 2 -> ivVeganCatalogElement.visibility = View.VISIBLE
-                3, 4 -> ivSaleCatalogElement.visibility = View.VISIBLE
+                3 -> ivHitCatalogElement.visibility = View.VISIBLE
+                4 -> ivSpicyCatalogElement.visibility = View.VISIBLE
             }
         }
     }
 }
-
-

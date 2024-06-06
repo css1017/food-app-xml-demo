@@ -25,5 +25,17 @@ data class ProductsData(
     @JsonProperty("carbohydrates_per_100_grams")
     val carbohydratesPer100Grams: Double,
     @JsonProperty("tag_ids")
+    val _tagIds: List<Int?>
+) {
+    // Define the new tag ID
+    private val saleTagId: Int = 0
+
     val tagIds: List<Int?>
-)
+        get() {
+            return if (priceOld != null) {
+                _tagIds + saleTagId
+            } else {
+                _tagIds
+            }
+        }
+}

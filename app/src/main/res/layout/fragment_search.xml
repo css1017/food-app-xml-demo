@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:background="?attr/bw">
 
     <LinearLayout
         android:id="@+id/llTitleSearch"
@@ -19,20 +20,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
+            android:contentDescription="@string/back"
             android:padding="16dp"
             android:src="@drawable/ic_arrow_left"
-            app:tint="@color/primary"
-            android:contentDescription="@string/back" />
+            app:tint="@color/primary" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/etSearch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/transparent"
             android:ems="10"
             android:hint="@string/find_hint"
             android:inputType="text"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:importantForAutofill="no" />
 
 
     </LinearLayout>
@@ -47,10 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/llTitleSearch" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCatalog"
-        tools:itemCount="16"
-        tools:listitem="@layout/element_catalog"
-        tools:spanCount="2"
+        android:id="@+id/rvSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -59,7 +58,10 @@
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llTitleSearch" />
+        app:layout_constraintTop_toBottomOf="@+id/llTitleSearch"
+        tools:itemCount="16"
+        tools:listitem="@layout/element_catalog"
+        tools:spanCount="2" />
 
     <TextView
         android:id="@+id/tvEmptySearch"
@@ -68,6 +70,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/empty_search_query"
+        android:textAlignment="center"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
